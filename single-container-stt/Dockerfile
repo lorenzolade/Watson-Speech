@@ -1,11 +1,11 @@
 # Model images
-FROM cp.icr.io/cp/ai/watson-stt-generic-models:1.0.0 as catalog
+FROM cp.icr.io/cp/ai/watson-stt-generic-models:1.5.0 as catalog
 # Add additional models here
-FROM cp.icr.io/cp/ai/watson-stt-en-us-multimedia:1.0.0 as en-us-multimedia
-FROM cp.icr.io/cp/ai/watson-stt-fr-fr-multimedia:1.0.0 as fr-fr-multimedia
+FROM cp.icr.io/cp/ai/watson-stt-en-us-multimedia:1.5.0 as en-us-multimedia
+FROM cp.icr.io/cp/ai/watson-stt-fr-fr-multimedia:1.5.0 as fr-fr-multimedia
 
 # Base image for the runtime
-FROM cp.icr.io/cp/ai/watson-stt-runtime:1.0.0 AS runtime
+FROM cp.icr.io/cp/ai/watson-stt-runtime:1.5.0 AS runtime
 
 # Configuration file directory
 ENV LOCAL_DIR=chuck_var
